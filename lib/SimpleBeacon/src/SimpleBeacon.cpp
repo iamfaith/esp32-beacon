@@ -2,7 +2,8 @@
 #include "esp32-hal-log.h"
 
 #include "bt.h"
-#include "bta_api.h"
+#include "esp_bt.h"
+// #include "bta_api.h"
 #include "esp_gap_ble_api.h"
 #include "esp_gatts_api.h"
 #include "esp_bt_defs.h"
@@ -68,28 +69,28 @@ static bool _init_gap()
     adv_data[8] = 21;    // Length of Beacon Data
 
     adv_data[9] = 0x00;  // UUID 1
-    adv_data[10] = 0x11; // UUID 2
-    adv_data[11] = 0x22; // UUID 3
-    adv_data[12] = 0x33; // UUID 4
-    adv_data[13] = 0x44; // UUID 5
-    adv_data[14] = 0x55; // UUID 6
-    adv_data[15] = 0x66; // UUID 7
-    adv_data[16] = 0x77; // UUID 8
-    adv_data[17] = 0x88; // UUID 9
-    adv_data[18] = 0x99; // UUID 10
-    adv_data[19] = 0xAA; // UUID 11
-    adv_data[20] = 0xBB; // UUID 12
-    adv_data[21] = 0xCC; // UUID 13
-    adv_data[22] = 0xDD; // UUID 14
-    adv_data[23] = 0xEE; // UUID 15
-    adv_data[24] = 0xFF; // UUID 16
+    adv_data[10] = 0x00; // UUID 2
+    adv_data[11] = 0x00; // UUID 3
+    adv_data[12] = 0x00; // UUID 4
+    adv_data[13] = 0x00; // UUID 5
+    adv_data[14] = 0x00; // UUID 6
+    adv_data[15] = 0x00; // UUID 7
+    adv_data[16] = 0x00; // UUID 8
+    adv_data[17] = 0x00; // UUID 9
+    adv_data[18] = 0x00; // UUID 10
+    adv_data[19] = 0x00; // UUID 11
+    adv_data[20] = 0x00; // UUID 12
+    adv_data[21] = 0x00; // UUID 13
+    adv_data[22] = 0x00; // UUID 14
+    adv_data[23] = 0x00; // UUID 15
+    adv_data[24] = 0x00; // UUID 16
 
     adv_data[25] = 0x08; // Major 1 Value
     adv_data[26] = 0x15; // Major 2 Value
     adv_data[27] = 0x47; // Minor 1 Value
     adv_data[28] = 0x11; // Minor 2 Value
 
-    adv_data[29] = 0xD8; // Beacons TX power
+    adv_data[29] = 0xC5; // Beacons TX power
 
     adv_data_len = 30;
 

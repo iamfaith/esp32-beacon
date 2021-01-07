@@ -22,5 +22,5 @@ void loop()
         Serial.println("Beacon failed");
     }
 
-    delay(DELAY_SECS * 1000);
+    delay(DELAY_SECS * 200);
 }
